@@ -1,7 +1,7 @@
 /*Queries that provide answers to the questions from all projects.*/
 
 -- Animals that name ends with mon
-SELECT * FROM animals WHERE name LIKE '%mon%';
+SELECT * FROM animals WHERE name LIKE '%mon';
 
 -- Animals born between 2016 and 2019
 SELECT name FROM animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-12-31';
@@ -13,7 +13,7 @@ SELECT name FROM animals WHERE neutered = true AND escape_attempts < 3;
 SELECT date_of_birth FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
 
 -- Name and escape_attempts from animals that weigh less than 10.5kg
-SELECT name, escape_attempts FROM animals WHERE weight_kg < 10.5;
+SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 
 -- Neutered animals
 SELECT * FROM animals WHERE neutered = true;
