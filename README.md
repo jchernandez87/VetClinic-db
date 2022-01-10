@@ -15,17 +15,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Juan Carlos Hernandez**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [Juan Carlos Hernandez](https://github.com/jchernandez87)
+- Twitter: [Twitter](https://twitter.com/Juancar70771241)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/juan-carlos-hernandez-200a05175)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
