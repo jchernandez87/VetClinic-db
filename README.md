@@ -1,8 +1,11 @@
-# curriculum-databases-projects-template
+<!-- ABOUT THE PROJECT -->
+  <h1 align="center">Vet-Clinic-Database</h1>
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+## About The Project
 
+![screenshot](https://user-images.githubusercontent.com/44485810/148834789-ce722fda-27ee-46d7-a232-a3ac17a47d71.png)
+
+For this project I will create a database using postgreSQL.
 
 ## Getting Started
 
