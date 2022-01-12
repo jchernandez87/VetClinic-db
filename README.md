@@ -3,7 +3,7 @@
 
 ## About The Project
 
-![screenshot](https://user-images.githubusercontent.com/44485810/148834789-ce722fda-27ee-46d7-a232-a3ac17a47d71.png)
+![Screenshot](https://user-images.githubusercontent.com/44485810/149212986-7ae8f506-c9fb-4daa-8821-e8752fe146c8.png)
 
 For this project I will create a database using postgreSQL.
 
