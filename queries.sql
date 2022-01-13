@@ -116,3 +116,8 @@ SELECT animals.name, visits.date_of_visit FROM animals JOIN visits ON animals.id
 -- Latest visit
 SELECT animals.name, vets.name, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animal_Id JOIN vets ON vets.id = visits.vet_id ORDER BY date_of_visit DESC LIMIT 1;
 
+-- Num of visit with no expert on that species
+SELECT COUNT(animals.name) FROM visits LEFT JOIN animals ON animals.id = visits.animal_id LEFT JOIN vets ON visits.vet_id = vets.id LEFT JOIN specializations ON vets.id = specializations.vet_id WHERE animals.species_id != specializations.species_id;
+
+-- Species that maisy smith gets the most
+SELECT species.name, COUNT(animals.species_id) AS num_of_visits FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON vets.id = visits.vet_id JOIN species ON species.id = animals.species_id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT(animals.species_id) DESC LIMIT 1;
