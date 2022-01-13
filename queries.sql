@@ -93,3 +93,26 @@ SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHE
 
 -- Who owns the most
 SELECT owners.full_name AS owner, COUNT(*) AS owned_animals FROM owners JOIN animals ON owners.id = animals.owner_id GROUP BY owners.full_name ORDER BY COUNT(*) DESC LIMIT 1;
+
+
+-- Number of animals stephanie mendez see
+SELECT COUNT(animals.name) FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Stephanie Mendez';
+
+-- Last animal visited by william tatcher;
+SELECT animals.name, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON vets.id = visits.vet_id WHERE vets.name = 'William Tatcher' ORDER BY visits.date_of_visit DESC LIMIT 1;
+
+-- All vets and their specialization
+SELECT vets.name, species.name FROM vets LEFT JOIN specializations ON vets.id = specializations.vet_id LEFT JOIN species ON species.id = specializations.species_id;
+
+-- Animals that visited stephanie mendez between April 1st and August 30th, 2020.
+SELECT animals.name, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON vets.id = visits.vet_id WHERE vets.name = 'Stephanie Mendez' AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+-- Animal with most visits
+SELECT animals.name, COUNT(animals.name) AS num_of_visits FROM animals JOIN visits ON animals.id = visits.animal_id GROUP BY animals.name ORDER BY COUNT(animals.name) DESC LIMIT 1;
+
+-- Maisy's smith first animal
+SELECT animals.name, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animal_id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Maisy Smith' ORDER BY visits.date_of_visit LIMIT 1;
+
+-- Latest visit
+SELECT animals.name, vets.name, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animal_Id JOIN vets ON vets.id = visits.vet_id ORDER BY date_of_visit DESC LIMIT 1;
+
