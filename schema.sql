@@ -44,3 +44,23 @@ ALTER TABLE animals ADD CONSTRAINT fk_species_id FOREIGN KEY(species_id) REFEREN
 -- Add owner_id column to animals and make it a foreign key
 ALTER TABLE animals ADD COLUMN owner_id INT;
 ALTER TABLE animals ADD CONSTRAINT fk_owner_id FOREIGN KEY(owner_id) REFERENCES owners(id) ON DELETE CASCADE;
+
+-- Create vets table
+CREATE TABLE vets(id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, name VARCHAR(50), age INT, date_of_graduation DATE);
+
+-- Create specializations table
+CREATE TABLE specializations(
+  species_id INT, 
+  vet_id INT, FOREIGN KEY(species_id) REFERENCES species(id) ON UPDATE CASCADE, 
+  FOREIGN KEY (vet_id) REFERENCES vets(id) ON UPDATE CASCADE, 
+  PRIMARY KEY (species_id, vet_id)
+);
+
+-- Create visits table
+CREATE TABLE visits(
+  date_of_visit DATE, 
+  animal_id INT, 
+  vet_id INT, 
+  FOREIGN KEY (animal_id) REFERENCES animals(id) ON UPDATE CASCADE, 
+  FOREIGN KEY (vet_Id) REFERENCES vets(id) ON UPDATE CASCADE
+);
