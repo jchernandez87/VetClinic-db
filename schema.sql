@@ -64,3 +64,8 @@ CREATE TABLE visits(
   FOREIGN KEY (animal_id) REFERENCES animals(id) ON UPDATE CASCADE, 
   FOREIGN KEY (vet_Id) REFERENCES vets(id) ON UPDATE CASCADE
 );
+
+-- Created index
+CREATE INDEX ON visits(anima_id);
+CREATE INDEX ON visits(vet_id);
+CREATE INDEX ON owners(email);
